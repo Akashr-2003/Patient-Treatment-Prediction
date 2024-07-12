@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-image: url('/static/img/landscape.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: #f5f5f5;
+        }
+
+        .registration-form {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        .registration-form h1 {
+            color: #9b0000;
+            text-align: center;
+            margin-bottom: 1em;
+        }
+
+        .registration-form input[type="text"],
+        .registration-form input[type="password"] {
+            width: 100%;
+            padding: 0.5em;
+            margin: 0.5em 0;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        .registration-form button {
+            width: 100%;
+            padding: 0.5em;
+            border: none;
+            background: #9b0000;
+            color: white;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .registration-form button:hover {
+            background: #b22222;
+        }
+
+        .registration-result {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <body>
+        <form class="registration-form" method="POST">
+            {% csrf_token %}
+            <h1>Registration</h1>
+            <input type="text" name="textfirstname" placeholder="First Name">
+            <input type="text" name="textlastname" placeholder="Last Name">
+            <input type="text" name="textusername" placeholder="User Name">
+            <input type="password" name="textpassword" placeholder="Password">
+            <button type="submit" name="submit">Submit</button>
+            {% if messages %}
+            {% for message in messages %}
+            <div class="registration-result">
+                {{ message }}
+                <a href="{% url 'userlogin' %}">Login</a>
+            </div>
+            {% endfor %}
+            {% endif %}
+        </form>
+    </body>
+
+</html>

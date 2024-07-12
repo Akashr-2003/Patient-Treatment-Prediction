@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Treatment Prediction</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-image: url('/static/img/landscape.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Roboto', sans-serif;
+            color: #222020;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .overlay {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 2em;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .overlay h1 {
+            color: #333;
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .overlay p {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .btn-primary {
+            font-size: 0.9rem;
+            padding: 10px 20px; /* Adjusted padding */
+            width: 150px; /* Adjusted width */
+            background-color: #007bff;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto; /* Center the button horizontally */
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+        }
+
+        .btn-primary i {
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay">
+        <h1>Prediction Portal</h1>
+        <p>Empowering healthcare with data-driven decisions.</p>
+        <a href="{% url 'patient' %}" class="btn btn-primary mt-3"><i class="fas fa-play-circle"></i> Start Prediction</a>
+        <div class="info-section">
+            <h1>INFORMATION</h1>
+            <p>Learn more about details required for patient treatment prediction.</p>
+            <a href="{% url 'about' %}" class="btn btn-primary mt-3"><i class="fas fa-info-circle"></i> Information</a>
+        </div>
+    </div>
+</body>
+</html>

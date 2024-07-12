@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patient Treatment Predictor</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url('/static/img/landscape.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: 'Montserrat', sans-serif;
+            color: #2c3e50; /* Darkened text color for better readability */
+            margin: 0; /* Removed default margin */
+            padding: 0; /* Removed default padding */
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Increased shadow for depth */
+            padding: 2rem;
+            max-width: 1500px;
+            margin: 0.7rem auto;
+            overflow: hidden; 
+        }
+
+        h1 {
+            color: #e74c3c;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            font-size: 1.8rem; /* Slightly increased font size */
+            margin-top: 2rem; /* Increased top margin for separation */
+            color: #2980b9; /* Changed color for better contrast */
+        }
+
+        p {
+            font-size: 1.2rem; /* Increased font size */
+            line-height: 1.8; /* Increased line height for better readability */
+            color: #34495e;
+        }
+
+        .table {
+            background-color: rgba(255, 255, 255, 0.9);
+        }
+
+        .table th,
+        .table td {
+            padding: 1rem; /* Increased padding for better spacing */
+            vertical-align: middle;
+        }
+
+        .btn-outline-dark {
+            border-color: #e74c3c;
+            color: #e74c3c;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .btn-outline-dark:hover {
+            background-color: #e74c3c;
+            color: #ffffff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>INFORMATION</h1>
+        <div class="centered-table">
+            <h2>Data Set Information:</h2>
+            <p>
+                The dataset is an Electronic Health Record collected from a private hospital in Indonesia, containing
+                laboratory test results used to determine the next treatment for patients, whether in care or out care.
+                The task embedded in the dataset is classification prediction.
+            </p>
+            <h2>Attribute Information:</h2>
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Data Type</th>
+                        <th>Value Sample</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>HAEMATOCRIT</td>
+                        <td>Continuous</td>
+                        <td>35.1</td>
+                        <td>Patient laboratory test result of haematocrit</td>
+                    </tr>
+                    <tr>
+                        <td>HAEMOGLOBINS</td>
+                        <td>Continuous</td>
+                        <td>11.8</td>
+                        <td>Patient laboratory test result of haemoglobins</td>
+                    </tr>
+                    <tr>
+                        <td>ERYTHROCYTE</td>
+                        <td>Continuous</td>
+                        <td>4.65</td>
+                        <td>Patient laboratory test result of erythrocyte</td>
+                    </tr>
+                    <tr>
+                        <td>LEUCOCYTE</td>
+                        <td>Continuous</td>
+                        <td>6.3</td>
+                        <td>Patient laboratory test result of leucocyte</td>
+                    </tr>
+                    <tr>
+                        <td>THROMBOCYTE</td>
+                        <td>Continuous</td>
+                        <td>310</td>
+                        <td>Patient laboratory test result of thrombocyte</td>
+                    </tr>
+                    <tr>
+                        <td>MCH</td>
+                        <td>Continuous</td>
+                        <td>25.4</td>
+                        <td>Patient laboratory test result of MCH</td>
+                    </tr>
+                    <tr>
+                        <td>MCHC</td>
+                        <td>Continuous</td>
+                        <td>33.6</td>
+                        <td>Patient laboratory test result of MCHC</td>
+                    </tr>
+                    <tr>
+                        <td>MCV</td>
+                        <td>Continuous</td>
+                        <td>75.5</td>
+                        <td>Patient laboratory test result of MCV</td>
+                    </tr>
+                    <tr>
+                        <td>AGE</td>
+                        <td>Continuous</td>
+                        <td>12</td>
+                        <td>Patient age</td>
+                    </tr>
+                    <tr>
+                        <td>SEX</td>
+                        <td>Nominal</td>
+                        <td>Binary/F/</td>
+                        <td>Patient gender </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+
+</html>
